@@ -1,0 +1,20 @@
+.carousel {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.productos-destacados ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+.productos-destacados li {
+  text-align: center;
+}
+
+.productos-destacados img {
+  width: 150px;
+  height: 150px;
+}
