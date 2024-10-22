@@ -17,7 +17,7 @@ const App = () => {
           <Header/>
           
         </header>
-          <SearchBar />        {/* Componente para la búsqueda */}
+        <SearchBar />        {/* Componente para la búsqueda */}
           <CategoryFilter />    {/* Filtro por categorías */}
         <main>
           <ProductList />       {/* Muestra la lista de productos */}

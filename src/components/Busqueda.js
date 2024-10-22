@@ -8,9 +8,9 @@ const SearchBar = () => {
 
   const handleSearch = async () => {
     const products = await searchProducts(query);
+    console.log(products); // Esto debería mostrar los productos que regresan de la búsqueda
     setProducts(products);
   };
-
   const styles = {
     container: {
       display: 'flex',

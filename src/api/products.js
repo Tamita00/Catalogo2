@@ -24,9 +24,12 @@ export const fetchProductsByCategory = async (category) => {
 // Buscar productos por consulta
 export const searchProducts = async (query) => {
   try {
-    const response = await axios.get(`https://dummyjson.com/products/search?q=${query}`);
-    return response.data.products;
+    const response = await fetch(`tu_api_url/products?search=${query}`);
+    const data = await response.json();
+    return data; // Asegúrate de que data sea un array de productos
   } catch (error) {
-    console.error('Error searching products:', error);
+    console.error("Error al buscar productos:", error);
+    return []; // Retorna un array vacío en caso de error
   }
+
 };
