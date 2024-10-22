@@ -1,4 +1,4 @@
-import axios from 'axios'; //npm install axios
+import axios from 'axios'; //npm install axios ; npm install react-router-dom
 
 
 // Obtener todos los productos
@@ -24,12 +24,10 @@ export const fetchProductsByCategory = async (category) => {
 // Buscar productos por consulta
 export const searchProducts = async (query) => {
   try {
-    const response = await fetch(`tu_api_url/products?search=${query}`);
-    const data = await response.json();
-    return data; // Asegúrate de que data sea un array de productos
+    const response = await axios.get(`https://dummyjson.com/products/search?q=${query}`); // Cambia 'tu_api_url' por una URL válida
+    return response.data.products; // Asegúrate de que devuelve un array de productos
   } catch (error) {
     console.error("Error al buscar productos:", error);
     return []; // Retorna un array vacío en caso de error
   }
-
 };
